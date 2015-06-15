@@ -114,8 +114,11 @@ Func DERedDropRevert()
 			If _Sleep(50) Then Return
 			If  ($Dark2 < ($searchDark * 0.15)) Then
 			   _CaptureRegion()
-			   If _ColorCheck(_GetPixelColor(746,498), Hex(0xc8cac7, 6), 20)=True Then
-				  SetLog("Low de. De = ( " & $Dark2 & " ) Return to protect Royals.  Returning immediately", $COLOR_GREEN)
+			   If $dropQueen = True And $checkQPower = False Then
+				  SetLog("Low de. De = ( " & $Dark2 & " ) and AQ health Low. Return to protect Royals.  Returning immediately", $COLOR_GREEN)
+				  $DarkLow = 1
+			   ElseIf _ColorCheck(_GetPixelColor(746,498), Hex(0xc8cac7, 6), 20)=True Then
+				  SetLog("Low de. De = ( " & $Dark2 & " ) and 1 star achieved. Return to protect Royals.  Returning immediately", $COLOR_GREEN)
 				  $DarkLow = 1
 			   Else
 				  If _Sleep(1000) Then Return

@@ -26,6 +26,14 @@ Func dropHeroes($x, $y, $KingSlot = -1, $QueenSlot = -1) ;Drops for king and que
 				$dropQueen = True
 			EndIf
 	EndSwitch
+	If $FoundDarkSideAtk = 1 And $DEEndEarly = 1 Then
+		If $KingSlot <> -1  Then
+			$dropKing = True
+		EndIf
+		If $QueenSlot <> -1 Then
+			$dropQueen = True
+		EndIf
+	EndIf
 	If $dropKing Then
 		SetLog("Dropping King", $COLOR_BLUE)
 		Click(68 + (72 * $KingSlot), 595) ;Select King

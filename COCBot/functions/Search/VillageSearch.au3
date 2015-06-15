@@ -181,7 +181,7 @@ Func VillageSearch() ;Control for searching a village that meets conditions
 				EndIf
 				If $DESideEnable = 1 Then
 					If checkDESideResources() = True Then
-						SetLog("DE Side Base Found Found Attacking NOW", $COLOR_BLUE)
+						SetLog("DE Side Base Found Attacking NOW", $COLOR_BLUE)
 						$FoundDarkSideAtk = 1
 						ExitLoop
 					EndIf
@@ -226,7 +226,7 @@ Func VillageSearch() ;Control for searching a village that meets conditions
 		Else
 			If $DESideEnable = 1 Then
 				If checkDESideResources()= True Then
-					SetLog("DE Side Base Found Found Attacking NOW", $COLOR_BLUE)
+					SetLog("DE Side Base Found Attacking NOW", $COLOR_BLUE)
 					$FoundDarkSideAtk = 1
 					ExitLoop
 				EndIf
